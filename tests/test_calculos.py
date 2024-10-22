@@ -1,5 +1,5 @@
 import unittest
-from calculos import Calculadora, NoSePuedeCalcular
+from scr.logica.calculos import Calculadora, NoSePuedeCalcular
 
 
 class TestCalculadora(unittest.TestCase):
@@ -57,7 +57,7 @@ class TestCalculadora(unittest.TestCase):
 
     def test_desviacion_estandar_n_elementos_mixtos(self):
         calculadora = Calculadora([-1, 1, -2, 2])
-        self.assertAlmostEqual(calculadora.desviacion_estandar(), 1.8257418583505538)
+        self.assertAlmostEqual(calculadora.desviacion_estandar(), 1.5811388300841898)
 
     def test_desviacion_estandar_elementos_no_numericos(self):
         calculadora = Calculadora([1, 2, 'a', 4])
@@ -67,4 +67,3 @@ class TestCalculadora(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

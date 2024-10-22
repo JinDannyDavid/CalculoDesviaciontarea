@@ -1,5 +1,10 @@
 import math
 
+
+class NoSePuedeCalcular(Exception):
+    pass
+
+
 class Calculadora:
     def __init__(self, elementos):
         self.elementos = elementos
@@ -23,6 +28,3 @@ class Calculadora:
         media = self.media()
         varianza = sum((x - media) ** 2 for x in self.elementos) / len(self.elementos)
         return math.sqrt(varianza)
-
-class NoSePuedeCalcular(Exception):
-    pass
